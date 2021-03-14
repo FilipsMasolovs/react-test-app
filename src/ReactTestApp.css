@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root,
+.react-test-app {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(246, 249, 252);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.react-test-app {
+  width: 100%;
+  max-width: 600px;
+}
+
+.react-test-app--login,
+.react-test-app--test,
+.react-test-app--finish {
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+}
+
+.react-test-app--test {
+  width: 100%;
+}
+
+.react-test-app--login-title,
+.react-test-app--test-question,
+.react-test-app--finish-title {
+  color: #72a276;
+}
+
+.react-test-app--login-input,
+.react-test-app--login-select {
+  color: #86cd82;
+  border: 1px solid #a0eec0;
+  border-radius: 8px;
+  padding: 8px;
+  transition: 0.4s;
+}
+
+.react-test-app--login-input.empty,
+.react-test-app--login-select.empty {
+  border-color: red;
+}
+
+.react-test-app--login-input:hover,
+.react-test-app--login-input:focus,
+.react-test-app--login-select:hover,
+.react-test-app--login-select:focus {
+  outline: none;
+  border-color: #86cd82;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.react-test-app--login-input {
+  margin: 24px 0 4px;
+}
+.react-test-app--login-select {
+  margin: 4px 0 24px;
+  cursor: pointer;
+}
+
+.react-test-app--login-button,
+.react-test-app--test-next-button,
+.react-test-app--finish-button {
+  padding: 8px;
+  border: 1px solid #a0eec0;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #a0eec0;
+  transition: color 0.4s, border-color 0.4s, background-color 0.4s;
+  cursor: pointer;
+}
+
+.react-test-app--login-button:hover,
+.react-test-app--login-button:focus,
+.react-test-app--test-next-button:hover,
+.react-test-app--test-next-button:focus,
+.react-test-app--finish-button:hover,
+.react-test-app--finish-button:focus {
+  outline: none;
+  color: white;
+  border-color: #86cd82;
+  background-color: #86cd82;
+}
+
+.react-test-app--test-answers {
+  display: flex;
+  gap: 8px;
+  flex-flow: wrap;
+  margin: 24px 0;
+}
+
+.react-test-app--test-answer {
+  width: 100%;
+  color: #86cd82;
+  border: 1px solid #a0eec0;
+  border-radius: 8px;
+  padding: 8px;
+  transition: color 0.4s, background-color 0.4s;
+  cursor: pointer;
+}
+
+.react-test-app--test-answer:hover,
+.react-test-app--test-answer:focus {
+  outline: none;
+  color: white;
+  background-color: #a0eec0;
+}
+
+.react-test-app--test-progress-bar {
+  width: 100%;
+  max-width: 276px;
+  margin: auto;
+  border: 1px solid #a0eec0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  height: 33px;
+}
+
+.react-test-app--test-progress-bar-inner {
+  background-color: #86cd82;
+  height: 33px;
+}
+
+.react-test-app--test-progress-bar-data {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+}
+
+.react-test-app--test-next-button,
+.react-test-app--finish-button {
+  display: block;
+  width: 100%;
+  max-width: 276px;
+  margin: 24px auto 0;
+}
+
+.react-test-app--finish-button {
+  margin: 0;
+}
+
+.react-test-app--finish-paragraph {
+  margin: 24px 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .react-test-app--test-answer {
+    width: calc(50% - 4px);
+  }
+}
+
+.react-test-app--data-loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(59,59,59,.1);
+  border-radius: 50%;
+  border-top-color: #86cd82;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
